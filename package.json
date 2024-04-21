@@ -4,6 +4,7 @@
   "description": "Styling lab for Obsidian.",
   "scripts": {
     "build": "grunt",
+    "watch": "grunt watch",
     "lint": "stylelint \"**/*.sass\""
   },
   "keywords": [],
