@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Styling lab for Obsidian.",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "lint": "stylelint \"**/*.sass\""
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,8 @@
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-sass": "^3.1.0",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard-scss": "^13.1.0"
   }
 }
