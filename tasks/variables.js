@@ -7,4 +7,5 @@ module.exports = function (grunt) {
   grunt.config("srcPath", "<%= root %>src");
   grunt.config("distPath", "<%= root %>dist");
   grunt.config("zipPath", "<%= root %>artifacts");
+  grunt.config("obsPath", "D:/vaults/productivity/.obsidian/snippets");
 };

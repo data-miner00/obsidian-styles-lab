@@ -7,5 +7,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON("package.json"),
   });
 
-  grunt.registerTask("default", ["clean", "sass"]);
+  grunt.loadTasks("tasks");
+
+  grunt.registerTask("default", ["clean", "sass", "copy"]);
 };
