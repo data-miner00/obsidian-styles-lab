@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 
   var config = {
     scss: {
-      files: ["src/*.scss"],
+      files: ["src/*.scss", "src/*.sass"],
       tasks: ["default"],
     },
   };

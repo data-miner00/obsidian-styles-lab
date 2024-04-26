@@ -1,0 +1,105 @@
+@import "colors.sass"
+@import "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+
+
+@mixin text-group()
+    color: var(--text-color)
+    #{--text-normal}: var(--text-color)
+    #{--text-muted}: var(--text-color)
+    #{--text-faint}: var(--text-color)
+    #{--checklist-done-color}: var(--text-color)
+    #{--metadata-label-text-color}: var(--text-color)
+    #{--metadata-input-text-color}: var(--text-color)
+    #{--checkbox-color-hover}: var(--text-color)
+    #{--checkbox-border-color}: var(--text-color)
+    #{--list-marker-color}: var(--text-color)
+
+@mixin background-group()
+    background-color: var(--background-color)
+    #{--tag-color}: var(--background-color)
+    #{--checkbox-marker-color}: var(--background-color)
+    #{--code-background}: color-mix(in srgb, var(--background-color) 80%, var(--accent-color) 20%)
+
+@mixin accent-group()
+    #{--tag-background}: var(--accent-color)
+    #{--hr-color}: var(--accent-color)
+    #{--blockquote-border-color}: var(--accent-color)
+    #{--interactive-accent}: var(--accent-color)
+    #{--collapse-icon-color-collapsed}: var(--accent-color)
+    #{--checkbox-color}: var(--accent-color)
+    #{--code-normal}: var(--accent-color)
+
+@mixin daily-group($background-color, $text-color, $accent-color)
+    #{--background-color}: $background-color
+    #{--text-color}: $text-color
+    #{--accent-color}: $accent-color
+
+\:root
+    #{--background-color}: $blue-100
+    #{--text-color}: $gray-600
+    #{--accent-color}: $blue-400
+
+.daily
+    @include text-group()
+    @include background-group()
+    @include accent-group()
+    color-scheme: light
+
+    \:is(h1, .HyperMD-header.HyperMD-header-1)
+        font-size: 80px
+        text-align: center
+        font-family: "Fraunces", serif
+        text-transform: uppercase
+        color: var(--accent-color)
+    
+    \:is(h2, .HyperMD-header.HyperMD-header-2)
+        font-size: 30px
+        text-align: center
+
+    \:is(h3, .HyperMD-header.HyperMD-header-3)
+        font-size: 30px
+        text-align: center
+        font-style: italic
+
+    \:is(h4, .HyperMD-header.HyperMD-header-4)
+        font-size: 20px
+        color: var(--background-color)
+        background-color: var(--accent-color)
+        padding: 0 6px
+        font-weight: 800
+        border-radius: 8px
+        word-wrap: normal
+        width: fit-content
+        margin-bottom: 0
+    
+    p
+        margin-top: 4px
+        margin-bottom: 4px
+
+    \:is(a:link, .cm-hmd-internal-link)
+        color: var(--accent-color)
+
+    \:is(a:hover, .cm-hmd-internal-link:hover)
+        color: var(--text-color)
+
+
+.monday
+    @include daily-group($red-100, $gray-600, $red-400)
+
+.tuesday
+    @include daily-group($yellow-100, $gray-600, $yellow-400)
+
+.wednesday
+    @include daily-group($green-100, $gray-600, $green-400)
+
+.thursday
+    @include daily-group($blue-100, $gray-600, $blue-400)
+
+.friday
+    @include daily-group($indigo-100, $gray-600, $indigo-400)
+
+.saturday
+    @include daily-group($purple-100, $gray-600, $purple-400)
+
+.sunday
+    @include daily-group($pink-100, $gray-600, $pink-400)
