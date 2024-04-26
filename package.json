@@ -5,7 +5,7 @@
   "scripts": {
     "build": "grunt",
     "watch": "grunt watch",
-    "lint": "stylelint \"**/*.sass\""
+    "lint": "stylelint \"**/*.sass\" --output-file dist/report.txt"
   },
   "keywords": [],
   "author": "",
