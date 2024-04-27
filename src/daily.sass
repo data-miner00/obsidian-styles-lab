@@ -82,24 +82,23 @@
     \:is(a:hover, .cm-hmd-internal-link:hover)
         color: var(--text-color)
 
+    &.monday
+        @include daily-group($red-100, $gray-600, $red-400)
 
-.monday
-    @include daily-group($red-100, $gray-600, $red-400)
+    &.tuesday
+        @include daily-group($yellow-100, $gray-600, $yellow-400)
 
-.tuesday
-    @include daily-group($yellow-100, $gray-600, $yellow-400)
+    &.wednesday
+        @include daily-group($green-100, $gray-600, $green-400)
 
-.wednesday
-    @include daily-group($green-100, $gray-600, $green-400)
+    &.thursday
+        @include daily-group($blue-100, $gray-600, $blue-400)
 
-.thursday
-    @include daily-group($blue-100, $gray-600, $blue-400)
+    &.friday
+        @include daily-group($indigo-100, $gray-600, $indigo-400)
 
-.friday
-    @include daily-group($indigo-100, $gray-600, $indigo-400)
+    &.saturday
+        @include daily-group($purple-100, $gray-600, $purple-400)
 
-.saturday
-    @include daily-group($purple-100, $gray-600, $purple-400)
-
-.sunday
-    @include daily-group($pink-100, $gray-600, $pink-400)
+    &.sunday
+        @include daily-group($pink-100, $gray-600, $pink-400)
