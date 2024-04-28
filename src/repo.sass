@@ -1,0 +1,52 @@
+@import "colors.sass"
+@import "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+
+\:root
+    #{--background-color}: $white
+    #{--accent-color}: $black
+
+@mixin accent-group()
+    #{--tag-background}: var(--accent-color)
+    #{--hr-color}: var(--accent-color)
+    #{--blockquote-border-color}: var(--accent-color)
+    #{--interactive-accent}: var(--accent-color)
+    #{--collapse-icon-color-collapsed}: var(--accent-color)
+    #{--checkbox-color}: var(--accent-color)
+    #{--code-normal}: var(--accent-color)
+
+.repo
+    background-color: var(--background-color)
+    @include accent-group()
+    color-scheme: light
+    
+    #{--text-selection}: $slate-200
+    #{--text-highlight-bg}: $slate-300
+    #{--link-color}: $slate-600
+    #{--link-external-color}: $slate-600
+    #{--link-color-hover}: $slate-900
+    #{--link-external-color-hover}: $slate-900
+    #{--link-unresolved-color}: $neutral-600
+
+    \:is(h1, .HyperMD-header.HyperMD-header-1)
+        font-size: 80px
+        text-align: center
+        font-family: "Fraunces", serif
+        text-transform: uppercase
+        border: solid 5px $black
+        color: $black
+        box-shadow: 8px 8px 0px 0px rgba(0,0,0,1)
+        -webkit-box-shadow: 8px 8px 0px 0px rgba(0,0,0,1)
+        -moz-box-shadow: 8px 8px 0px 0px rgba(0,0,0,1)
+        padding: 10px 0
+        margin-bottom: 48px
+
+    hr
+        border-top-style: dashed
+    
+    .multi-select-pill
+        color: $white
+        &-remove-button
+            color: $white
+
+        &:hover
+            background: rgba(0, 0, 0, 0.6)

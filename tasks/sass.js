@@ -23,6 +23,10 @@ module.exports = function (grunt) {
           src: "<%= srcPath %>/daily.sass",
           dest: "<%= distPath %>/daily.css",
         },
+        {
+          src: "<%= srcPath %>/repo.sass",
+          dest: "<%= distPath %>/repo.css",
+        },
       ],
     },
   };

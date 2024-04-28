@@ -11,7 +11,7 @@ module.exports = function (grunt) {
       files: [
         {
           cwd: "<%= distPath %>",
-          src: ["general.css", "daily.css"],
+          src: ["*.css"],
           dest: "<%= obsPath %>/",
           filter: "isFile",
           expand: true,
