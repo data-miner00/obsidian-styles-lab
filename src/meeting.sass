@@ -1,0 +1,23 @@
+@import "colors.sass"
+@import "https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+
+.meeting
+
+    \:is(h1, .HyperMD-header.HyperMD-header-1)
+        text-align: center
+        color: $slate-500
+        font-family: "Charm", cursive
+        font-weight: 700
+        font-size: 80px
+
+    .callout[data-callout="actionitems"]
+        background: $white
+        border-width: 0px
+        padding: 0
+
+        .callout-title
+            &-inner
+                font-size: 24px
+                color: var(--h2-color)
+            .callout-icon
+                display: none

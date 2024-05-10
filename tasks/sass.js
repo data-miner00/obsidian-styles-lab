@@ -27,6 +27,10 @@ module.exports = function (grunt) {
           src: "<%= srcPath %>/repo.sass",
           dest: "<%= distPath %>/repo.css",
         },
+        {
+          src: "<%= srcPath %>/meeting.sass",
+          dest: "<%= distPath %>/meeting.css",
+        },
       ],
     },
   };
