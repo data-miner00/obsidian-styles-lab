@@ -1,0 +1,30 @@
+@import "colors.sass"
+@import "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+
+.vocab
+    #{--h1-gradient-start-color}: $cyan-300
+    #{--h1-gradient-end-color}: $purple-400
+    #{--callout-gradient-start-color}: $cyan-100
+    #{--callout-gradient-end-color}: $purple-50
+
+    \:is(h1, .HyperMD-header.HyperMD-header-1)
+        font-family: "Merriweather", serif
+        text-align: center
+        font-size: 64px
+        text-transform: uppercase
+        background: var(--h1-gradient-start-color)
+        background: linear-gradient(to right, var(--h1-gradient-start-color) 0%, var(--h1-gradient-end-color) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    .callout[data-callout=vocab]
+        background: linear-gradient(to right, var(--callout-gradient-start-color) 0%, var(--callout-gradient-end-color) 100%)
+
+        .callout-title
+            color: $sky-500
+            .callout-icon
+                .svg-icon
+                    color: $sky-500
+
+        ul
+            #{--list-marker-color}: $sky-300

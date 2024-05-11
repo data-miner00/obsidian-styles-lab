@@ -1,23 +1,37 @@
 @import "colors.sass"
-@import "https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+@import "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
 
 .meeting
 
     \:is(h1, .HyperMD-header.HyperMD-header-1)
         text-align: center
-        color: $slate-500
-        font-family: "Charm", cursive
+        font-family: "Libre Baskerville", serif
         font-weight: 700
         font-size: 80px
 
-    .callout[data-callout="actionitems"]
-        background: $white
-        border-width: 0px
-        padding: 0
+    \:is(h2, .HyperMD-header.HyperMD-header-2)
+        text-align: center
+        border: 1px dashed $slate-300
+        font-family: "Libre Baskerville", serif
+        padding-block: 1rem
+        font-size: 40px
+        text-transform: uppercase
+
+    .callout[data-callout="todo"]
+        background: $orange-100
 
         .callout-title
-            &-inner
-                font-size: 24px
-                color: var(--h2-color)
+            color: $orange-500
             .callout-icon
-                display: none
+                .svg-icon
+                    color: $orange-500
+
+        .callout-content
+            ul.contains-task-list
+                padding-inline-start: 0
+
+                input[type=checkbox]:checked
+                    #{--checkbox-color}: $orange-500
+
+                    &:hover
+                        #{--checkbox-color-hover}: $orange-700
