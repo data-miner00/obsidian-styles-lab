@@ -1,0 +1,77 @@
+@use "sass:color"
+@import "colors.sass"
+
+@mixin text-group()
+    #{--text-normal}: var(--accent-color)
+    #{--text-muted}: var(--accent-color)
+    #{--text-faint}: var(--accent-color-trans)
+
+    @for $i from 1 through 6
+        #{--h#{$i}-color}: var(--accent-color)
+
+    #{--table-header-color}: var(--accent-color)
+    #{--link-color}: $slate-700
+    #{--link-color-hover}: $slate-500
+    #{--link-unresolved-color}: $slate-300
+
+@mixin accent-group()
+    #{--hr-color}: var(--accent-color)
+    #{--blockquote-border-color}: var(--accent-color)
+    #{--embed-border-left}: 2px solid var(--accent-color)
+    #{--collapse-icon-color-collapsed}: var(--accent-color)
+    #{--checkbox-color}: var(--accent-color)
+    #{--checkbox-marker-color}: var(--accent-color)
+    #{--checkbox-color-hover}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+    #{--checkbox-border-color}: var(--accent-color)
+    #{--checklist-done-color}: var(--accent-color)
+    #{--list-marker-color}: var(--accent-color)
+
+    #{--icon-color}: var(--accent-color)
+    #{--interactive-accent}: var(--accent-color)
+    #{--metadata-label-text-color}: var(--accent-color)
+    #{--metadata-input-text-color}: var(--accent-color)
+    #{--tag-color}: var(--accent-color)
+    #{--tag-background}: var(--accent-color-trans)
+    #{--pill-color-hover}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+    #{--checkbox-border-color-hover}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+    #{--background-modifier-border-focus}: var(--accent-color)
+    #{--background-modifier-border}: var(--accent-color-trans)
+    #{--background-modifier-hover}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+    #{--indentation-guide-color}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+
+    input[type=checkbox]:checked:after
+        background-color: var(--page-color)
+
+    @media (hover: hover)
+        #{--pill-color-hover}: color-mix(in srgb, var(--accent-color) 60%, transparent)
+
+.custom-page
+    color: var(--accent-color)
+    background: var(--page-color)
+    @include text-group()
+    @include accent-group()
+
+    &.manila
+        #{--page-color}: $orange-100
+        #{--accent-color}: $gray-900
+        #{--accent-color-trans}: color-mix(in srgb, var(--accent-color) 15%, transparent)
+        //#{--embed-block-shadow-hover}: 
+        color-scheme: light
+
+        #{--link-color}: color-mix(in srgb, $black 60%, $white)
+        #{--link-color-hover}: color-mix(in srgb, $black 90%, $white)
+        #{--link-external-color-hover}: color-mix(in srgb, $black 90%, $white)
+        #{--link-unresolved-color}: $gray-600
+        #{--table-header-border-color}: var(--accent-color)
+        #{--table-border-color}: var(--accent-color)
+    
+    &.blueprint
+        #{--page-color}: $sky-600
+        #{--accent-color}: $white
+        #{--accent-color-trans}: color-mix(in srgb, var(--accent-color) 15%, transparent)
+        color-scheme: dark
+
+        #{--link-color}: color-mix(in srgb, $sky-300 60%, $white)
+        #{--link-color-hover}: color-mix(in srgb, $sky-300 20%, $white)
+        #{--link-external-color-hover}: color-mix(in srgb, $sky-300 20%, $white)
+        #{--link-unresolved-color}: $gray-300

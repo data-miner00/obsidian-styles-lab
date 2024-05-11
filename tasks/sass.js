@@ -35,6 +35,10 @@ module.exports = function (grunt) {
           src: "<%= srcPath %>/vocab.sass",
           dest: "<%= distPath %>/vocab.css",
         },
+        {
+          src: "<%= srcPath %>/components.sass",
+          dest: "<%= distPath %>/components.css",
+        },
       ],
     },
   };
